@@ -1,0 +1,73 @@
+{
+  "description": "A join or context relationship between two physical sources.",
+  "properties": {
+    "cardinality": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Cardinality"
+    },
+    "context_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Context Name"
+    },
+    "evidence": {
+      "title": "Evidence",
+      "type": "string"
+    },
+    "extraction_source": {
+      "title": "Extraction Source",
+      "type": "string"
+    },
+    "is_shortcut": {
+      "default": false,
+      "title": "Is Shortcut",
+      "type": "boolean"
+    },
+    "join_expression": {
+      "title": "Join Expression",
+      "type": "string"
+    },
+    "join_type": {
+      "title": "Join Type",
+      "type": "string"
+    },
+    "left_source_id": {
+      "title": "Left Source Id",
+      "type": "string"
+    },
+    "relationship_id": {
+      "title": "Relationship Id",
+      "type": "string"
+    },
+    "right_source_id": {
+      "title": "Right Source Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "relationship_id",
+    "left_source_id",
+    "right_source_id",
+    "join_expression",
+    "join_type",
+    "extraction_source",
+    "evidence"
+  ],
+  "title": "Relationship",
+  "type": "object"
+}

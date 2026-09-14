@@ -1,0 +1,18 @@
+universe:
+  exact_name: DM_Invoice_Data_Mart.unx
+  slug: dm_invoice_data_mart
+  format: UNX
+  expected_fact_candidates:
+    - FCTV_INVOICE
+route_a:
+  enabled_for_reconciliation: true
+route_b:
+  enabled: true
+  cms_repository_path: null
+  universe_cuid: null
+  save_for_all_users: false
+hana_generation:
+  deployment_enabled: false
+  require_hana_source_verification: true
+  require_reconciliation_before_certification: true
+  context_strategy: AUTO_WITH_REVIEW_GATE

@@ -1,0 +1,45 @@
+{
+  "run_id": "run-sample-0001",
+  "source_system": "BO_SEMANTIC_LAYER_REST",
+  "source_operation": "listUniverseObjects",
+  "source_identifier": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "retrieved_at_utc": "2026-01-15T09:31:00Z",
+  "http_status": 200,
+  "content_hash_sha256": "0000000000000000000000000000000000000000000000000000000000bb",
+  "redactions_applied": [],
+  "payload": {
+    "objects": [
+      {
+        "id": "OBJ_0001",
+        "technical_name": "CUST_ID",
+        "name": "Customer ID",
+        "folder": "Customer",
+        "type": "dimension",
+        "description": "Unique customer identifier.",
+        "data_type": "character",
+        "select": "CUSTOMER.CUST_ID"
+      },
+      {
+        "id": "OBJ_0002",
+        "technical_name": "SALES_AMT",
+        "name": "Sales Amount",
+        "folder": "Sales",
+        "type": "measure",
+        "description": "Total sales amount.",
+        "data_type": "numeric",
+        "select": "SALES.AMOUNT",
+        "aggregation": "sum"
+      },
+      {
+        "id": "OBJ_0003",
+        "technical_name": "LEGACY_FLAG",
+        "name": "Legacy Flag",
+        "folder": "Misc",
+        "type": "widget",
+        "description": null,
+        "data_type": "character",
+        "select": "MISC.LEGACY_FLAG"
+      }
+    ]
+  }
+}

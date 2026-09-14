@@ -1,0 +1,35 @@
+# Non-secret extraction settings for local development.
+# Secrets (BO_BASE_URL, BO_USERNAME, BO_PASSWORD, etc.) come from environment variables only.
+
+profile_name: dev
+
+universe:
+  # Provide exactly one of cuid / exact_name. CUID is preferred when both are present.
+  cuid: null
+  exact_name: null
+  expected_type: UNX
+
+repository:
+  folder_path: null
+
+extraction:
+  include_webi_dependencies: true
+  include_usage: false
+  include_hana_lineage: false
+  preserve_raw_responses: true
+  fail_on_unknown_object_type: true
+  max_documents: 500
+
+output:
+  root: output
+  formats:
+    - json
+    - csv
+    - markdown
+
+security:
+  read_only: true
+  redact_headers:
+    - Authorization
+    - Cookie
+    - Set-Cookie

@@ -1,0 +1,14 @@
+{
+  "run_id": "run-sample-0001",
+  "source_system": "BO_SEMANTIC_LAYER_REST",
+  "source_operation": "authenticationFailure",
+  "source_identifier": "n/a",
+  "retrieved_at_utc": "2026-01-15T09:29:00Z",
+  "http_status": 401,
+  "content_hash_sha256": "0000000000000000000000000000000000000000000000000000000000ee",
+  "redactions_applied": ["Authorization"],
+  "payload": {
+    "error_code": "INVALID_CREDENTIALS",
+    "message": "Sanitized sample error response used only for negative contract tests."
+  }
+}

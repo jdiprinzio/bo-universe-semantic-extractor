@@ -1,0 +1,5 @@
+# Remote-only SAP SDK classpath manifest.
+# Replace with absolute paths on the Windows RDP machine; do not commit SAP JARs.
+# Example entries are intentionally omitted because exact filenames are REQUIRED_INPUT.
+# SAP_SEMANTIC_LAYER_SDK_JARS=
+# SAP_ENTERPRISE_SDK_JARS=

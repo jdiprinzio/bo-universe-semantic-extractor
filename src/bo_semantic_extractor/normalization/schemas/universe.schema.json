@@ -1,0 +1,60 @@
+{
+  "description": "A published SAP BusinessObjects universe (UNX or UNV).",
+  "properties": {
+    "connection_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Connection Ids",
+      "type": "array"
+    },
+    "description": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Description"
+    },
+    "extracted_at_utc": {
+      "format": "date-time",
+      "title": "Extracted At Utc",
+      "type": "string"
+    },
+    "repository_path": {
+      "title": "Repository Path",
+      "type": "string"
+    },
+    "source_system": {
+      "title": "Source System",
+      "type": "string"
+    },
+    "universe_cuid": {
+      "title": "Universe Cuid",
+      "type": "string"
+    },
+    "universe_name": {
+      "title": "Universe Name",
+      "type": "string"
+    },
+    "universe_type": {
+      "description": "'UNX' or 'UNV'.",
+      "title": "Universe Type",
+      "type": "string"
+    }
+  },
+  "required": [
+    "universe_cuid",
+    "universe_name",
+    "universe_type",
+    "repository_path",
+    "source_system",
+    "extracted_at_utc"
+  ],
+  "title": "Universe",
+  "type": "object"
+}

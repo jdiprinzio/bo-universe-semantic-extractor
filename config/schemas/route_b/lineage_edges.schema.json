@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bo-universe-semantic-extractor/config/schemas/route_b/lineage_edges.schema.json",
+  "title": "ROUTE_B_SDK lineage edges export",
+  "allOf": [{"$ref": "common.schema.json"}],
+  "type": "object",
+  "required": ["items"],
+  "properties": {"items": {"type": "array", "items": {"type": "object", "required": ["business_object_id", "source_expression", "source_table", "source_column", "verification_status"], "properties": {"business_object_id": {"type": "string"}, "business_object_name": {"type": ["string", "null"]}, "source_expression": {"type": ["string", "null"]}, "source_table": {"type": ["string", "null"]}, "source_column": {"type": ["string", "null"]}, "physical_hana_object": {"type": "string", "const": "UNKNOWN"}, "physical_hana_column": {"type": "string", "const": "UNKNOWN"}, "verification_status": {"type": "string"}}, "additionalProperties": false}}}
+}

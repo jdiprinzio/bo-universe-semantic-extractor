@@ -1,0 +1,60 @@
+{
+  "description": "A report-local variable, including formula and dependency references.",
+  "properties": {
+    "dependencies": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Dependencies",
+      "type": "array"
+    },
+    "document_cuid": {
+      "title": "Document Cuid",
+      "type": "string"
+    },
+    "extraction_source": {
+      "title": "Extraction Source",
+      "type": "string"
+    },
+    "formula": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Formula"
+    },
+    "qualification": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Qualification"
+    },
+    "variable_id": {
+      "title": "Variable Id",
+      "type": "string"
+    },
+    "variable_name": {
+      "title": "Variable Name",
+      "type": "string"
+    }
+  },
+  "required": [
+    "document_cuid",
+    "variable_id",
+    "variable_name",
+    "extraction_source"
+  ],
+  "title": "ReportVariable",
+  "type": "object"
+}

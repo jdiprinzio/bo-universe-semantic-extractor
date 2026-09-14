@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bo-universe-semantic-extractor/config/schemas/route_b/common.schema.json",
+  "title": "ROUTE_B_SDK common evidence fields",
+  "type": "object",
+  "required": ["source_system", "extraction_method", "evidence_level", "verification_status"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "route_b.sdk.v1"},
+    "run_id": {"type": "string"},
+    "universe_cuid": {"type": ["string", "null"]},
+    "universe_name": {"type": "string"},
+    "source_system": {"type": "string"},
+    "extraction_method": {"type": "string"},
+    "evidence_level": {"enum": ["AUTHORITATIVE_SDK", "DERIVED_PDF", "UNVERIFIED_CANDIDATE"]},
+    "verification_status": {"enum": ["CONFIRMED", "PARSED_UNVERIFIED", "UNKNOWN"]},
+    "extracted_at_utc": {"type": "string", "format": "date-time"}
+  },
+  "additionalProperties": true
+}

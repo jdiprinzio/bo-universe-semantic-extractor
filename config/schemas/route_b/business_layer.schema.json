@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bo-universe-semantic-extractor/config/schemas/route_b/business_layer.schema.json",
+  "title": "ROUTE_B_SDK business layer export",
+  "allOf": [{"$ref": "common.schema.json"}],
+  "type": "object",
+  "required": ["items"],
+  "properties": {
+    "items": {"type": "array", "items": {"type": "object", "required": ["identifier", "name", "object_type", "verification_status"], "properties": {"identifier": {"type": "string"}, "name": {"type": "string"}, "description": {"type": ["string", "null"]}, "object_type": {"type": "string"}, "path": {"type": ["string", "null"]}, "full_path": {"type": ["string", "null"]}, "hidden": {"type": ["boolean", "null"]}, "data_type": {"type": ["string", "null"]}, "select_expression": {"type": ["string", "null"]}, "where_expression": {"type": ["string", "null"]}, "projection_function": {"type": ["string", "null"]}, "verification_status": {"type": "string"}}, "additionalProperties": true}}
+  }
+}

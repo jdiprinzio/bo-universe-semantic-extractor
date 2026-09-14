@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bo-universe-semantic-extractor/config/schemas/route_b/join_metadata.schema.json",
+  "title": "ROUTE_B_SDK join metadata export",
+  "allOf": [{"$ref": "common.schema.json"}],
+  "type": "object",
+  "required": ["items"],
+  "properties": {"items": {"type": "array", "items": {"type": "object", "required": ["identifier", "expression", "cardinality", "outer_type", "verification_status"], "properties": {"identifier": {"type": "string"}, "left_table": {"type": ["string", "null"]}, "right_table": {"type": ["string", "null"]}, "left_columns": {"type": "array"}, "right_columns": {"type": "array"}, "expression": {"type": ["string", "null"]}, "cardinality": {"type": "string"}, "outer_type": {"type": ["string", "null"]}, "operator": {"type": ["string", "null"]}, "verification_status": {"type": "string"}}, "additionalProperties": true}}}
+}

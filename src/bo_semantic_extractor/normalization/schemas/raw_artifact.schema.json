@@ -1,0 +1,65 @@
+{
+  "description": "An unmodified API/SDK response plus its required evidence metadata.",
+  "properties": {
+    "content_hash_sha256": {
+      "title": "Content Hash Sha256",
+      "type": "string"
+    },
+    "http_status": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Http Status"
+    },
+    "payload": {
+      "additionalProperties": true,
+      "description": "Raw response payload, unmodified except for redactions.",
+      "title": "Payload",
+      "type": "object"
+    },
+    "redactions_applied": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Redactions Applied",
+      "type": "array"
+    },
+    "retrieved_at_utc": {
+      "format": "date-time",
+      "title": "Retrieved At Utc",
+      "type": "string"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "source_identifier": {
+      "title": "Source Identifier",
+      "type": "string"
+    },
+    "source_operation": {
+      "title": "Source Operation",
+      "type": "string"
+    },
+    "source_system": {
+      "title": "Source System",
+      "type": "string"
+    }
+  },
+  "required": [
+    "run_id",
+    "source_system",
+    "source_operation",
+    "source_identifier",
+    "retrieved_at_utc",
+    "content_hash_sha256"
+  ],
+  "title": "RawArtifact",
+  "type": "object"
+}

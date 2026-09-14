@@ -1,0 +1,40 @@
+{
+  "run_id": "run-evidence-0001",
+  "source_system": "BO_QUERY_PANEL_INTERNAL",
+  "source_operation": "getUniverseList",
+  "source_identifier": "ALL_UNIVERSES",
+  "retrieved_at_utc": "2026-02-01T09:00:00Z",
+  "http_status": 200,
+  "content_hash_sha256": "a6cd8396540c4889be86d318299563d6a24835e84375c3f854264cce544a1fd1",
+  "redactions_applied": [],
+  "payload": {
+    "universes": {
+      "universe": [
+        {
+          "id": 100001,
+          "cuid": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "name": "DM_Invoice_Data_Mart.unx",
+          "description": "Sanitized representative universe for contract testing.",
+          "type": "unx",
+          "subType": "UnxRelational",
+          "folderId": 500,
+          "path": "Universes",
+          "pathIds": "568",
+          "revision": 60
+        },
+        {
+          "id": 100002,
+          "cuid": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "name": "SAMPLE_SALES_UNIVERSE.unx",
+          "description": "Secondary sample universe.",
+          "type": "unx",
+          "subType": "UnxRelational",
+          "folderId": 501,
+          "path": "Universes",
+          "pathIds": "569",
+          "revision": 10
+        }
+      ]
+    }
+  }
+}

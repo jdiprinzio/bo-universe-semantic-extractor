@@ -1,0 +1,183 @@
+{
+  "$defs": {
+    "ObjectType": {
+      "description": "Allowed universe object types. Unknown types must stay UNKNOWN, never be coerced.",
+      "enum": [
+        "dimension",
+        "attribute",
+        "measure",
+        "filter",
+        "hierarchy",
+        "level",
+        "parameter",
+        "unknown"
+      ],
+      "title": "ObjectType",
+      "type": "string"
+    }
+  },
+  "description": "A single semantic-layer object (dimension, measure, filter, etc.) within a universe.",
+  "properties": {
+    "access_level": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Access Level"
+    },
+    "aggregation_function": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Aggregation Function"
+    },
+    "associated_dimension_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Associated Dimension Id"
+    },
+    "data_type": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Data Type"
+    },
+    "description": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Description"
+    },
+    "extraction_source": {
+      "title": "Extraction Source",
+      "type": "string"
+    },
+    "folder_path": {
+      "title": "Folder Path",
+      "type": "string"
+    },
+    "is_deprecated": {
+      "default": false,
+      "title": "Is Deprecated",
+      "type": "boolean"
+    },
+    "is_hidden": {
+      "default": false,
+      "title": "Is Hidden",
+      "type": "boolean"
+    },
+    "list_of_values_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "List Of Values Id"
+    },
+    "object_id": {
+      "title": "Object Id",
+      "type": "string"
+    },
+    "object_name": {
+      "title": "Object Name",
+      "type": "string"
+    },
+    "object_type": {
+      "$ref": "#/$defs/ObjectType"
+    },
+    "projection_function": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Projection Function"
+    },
+    "select_expression": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Select Expression"
+    },
+    "source_evidence_path": {
+      "title": "Source Evidence Path",
+      "type": "string"
+    },
+    "technical_name": {
+      "title": "Technical Name",
+      "type": "string"
+    },
+    "universe_cuid": {
+      "title": "Universe Cuid",
+      "type": "string"
+    },
+    "where_expression": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Where Expression"
+    }
+  },
+  "required": [
+    "universe_cuid",
+    "object_id",
+    "technical_name",
+    "object_name",
+    "folder_path",
+    "object_type",
+    "extraction_source",
+    "source_evidence_path"
+  ],
+  "title": "UniverseObject",
+  "type": "object"
+}

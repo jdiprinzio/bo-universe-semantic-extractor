@@ -1,0 +1,57 @@
+{
+  "description": "A single query/data-provider within a Web Intelligence document.",
+  "properties": {
+    "data_provider_id": {
+      "title": "Data Provider Id",
+      "type": "string"
+    },
+    "data_provider_name": {
+      "title": "Data Provider Name",
+      "type": "string"
+    },
+    "document_cuid": {
+      "title": "Document Cuid",
+      "type": "string"
+    },
+    "prompts": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Prompts",
+      "type": "array"
+    },
+    "query_filters": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Query Filters",
+      "type": "array"
+    },
+    "query_properties": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Query Properties",
+      "type": "object"
+    },
+    "result_object_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Result Object Ids",
+      "type": "array"
+    },
+    "universe_cuid": {
+      "title": "Universe Cuid",
+      "type": "string"
+    }
+  },
+  "required": [
+    "document_cuid",
+    "data_provider_id",
+    "data_provider_name",
+    "universe_cuid"
+  ],
+  "title": "DataProvider",
+  "type": "object"
+}

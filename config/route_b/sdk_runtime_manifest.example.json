@@ -1,0 +1,35 @@
+{
+  "schema_version": "route_b.sdk.v1",
+  "track": "ROUTE_B_SDK",
+  "sdk_release_target": "SAP BusinessObjects 4.3 / Semantic Layer Java SDK 4.4",
+  "jvm_requirement": "SAP-supported JVM matching the installed BusinessObjects 4.3 client runtime",
+  "detect_jvm_version_and_architecture_at_runtime": true,
+  "sdk_classpath_source": "REMOTE_ONLY",
+  "confirmed_core_jars": [
+    "com.sap.sl.sdk.jar",
+    "com.sap.sl.edp.relational.jar",
+    "com.sap.sl.edp.hana.jar",
+    "com.businessobjects.mds.datafoundation.jar"
+  ],
+  "confirmed_packages": [
+    "com.crystaldecisions.sdk.framework",
+    "com.sap.sl.sdk.framework",
+    "com.sap.sl.sdk.framework.cms",
+    "com.sap.sl.sdk.authoring.cms",
+    "com.sap.sl.sdk.authoring.businesslayer",
+    "com.sap.sl.sdk.authoring.datafoundation",
+    "com.sap.sl.sdk.authoring.connection"
+  ],
+  "cms_connection_attempted": false,
+  "credentials_persisted": false,
+  "capabilities_register": "config/route_b/confirmed_sdk_capabilities.json",
+  "status": "SKELETON_ONLY",
+  "unresolved_required_inputs": [
+    "Complete transitive SDK classpath",
+    "Confirmed read-only loading path from local BLX/DFX or CMS retrieval",
+    "Confirmed method or service returning DataSource",
+    "Confirmed method or service returning DataFoundation",
+    "CMS details and permissions only if CMS retrieval is selected",
+    "Remote working and export directories"
+  ]
+}

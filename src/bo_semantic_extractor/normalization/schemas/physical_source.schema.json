@@ -1,0 +1,70 @@
+{
+  "description": "A physical table/column referenced by a universe object, prior to lineage verification.",
+  "properties": {
+    "column_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Column Name"
+    },
+    "database_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Database Name"
+    },
+    "evidence": {
+      "title": "Evidence",
+      "type": "string"
+    },
+    "object_name": {
+      "title": "Object Name",
+      "type": "string"
+    },
+    "object_type": {
+      "title": "Object Type",
+      "type": "string"
+    },
+    "schema_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Schema Name"
+    },
+    "source_id": {
+      "title": "Source Id",
+      "type": "string"
+    },
+    "source_platform": {
+      "title": "Source Platform",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source_id",
+    "source_platform",
+    "object_name",
+    "object_type",
+    "evidence"
+  ],
+  "title": "PhysicalSource",
+  "type": "object"
+}

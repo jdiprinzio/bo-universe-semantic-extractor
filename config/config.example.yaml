@@ -1,0 +1,12 @@
+# Example non-secret configuration.
+# Copy to config.yaml and adjust as needed; do not place secrets here (use .env).
+
+extraction:
+  source_dir: ./raw
+  output_dir: ./output
+  formats:
+    - unv
+    - unx
+
+logging:
+  level: INFO

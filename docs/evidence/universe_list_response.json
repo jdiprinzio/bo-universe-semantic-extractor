@@ -1,0 +1,30 @@
+{
+  "universes": {
+    "universe": [
+      {
+        "id": 100001,
+        "cuid": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "name": "DM_Invoice_Data_Mart.unx",
+        "description": "Sanitized representative universe for contract testing.",
+        "type": "unx",
+        "subType": "UnxRelational",
+        "folderId": 500,
+        "path": "Universes",
+        "pathIds": "568",
+        "revision": 60
+      },
+      {
+        "id": 100002,
+        "cuid": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+        "name": "SAMPLE_SALES_UNIVERSE.unx",
+        "description": "Secondary sample universe.",
+        "type": "unx",
+        "subType": "UnxRelational",
+        "folderId": 501,
+        "path": "Universes",
+        "pathIds": "569",
+        "revision": 10
+      }
+    ]
+  }
+}

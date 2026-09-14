@@ -1,0 +1,18 @@
+{
+  "run_id": "run-sample-0001",
+  "source_system": "BO_SEMANTIC_LAYER_REST",
+  "source_operation": "getUniverse",
+  "source_identifier": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "retrieved_at_utc": "2026-01-15T09:30:00Z",
+  "http_status": 200,
+  "content_hash_sha256": "0000000000000000000000000000000000000000000000000000000000aa",
+  "redactions_applied": ["Authorization"],
+  "payload": {
+    "cuid": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "name": "SAMPLE_SALES_UNIVERSE",
+    "type": "UNX",
+    "path": "/Sample/Sales/SAMPLE_SALES_UNIVERSE",
+    "description": "Sanitized sample universe used only for contract tests.",
+    "connections": ["CONN_SAMPLE_HANA"]
+  }
+}

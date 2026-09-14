@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bo-universe-semantic-extractor/config/schemas/route_b/data_foundation.schema.json",
+  "title": "ROUTE_B_SDK data foundation export",
+  "allOf": [{"$ref": "common.schema.json"}],
+  "type": "object",
+  "required": ["items"],
+  "properties": {"items": {"type": "array", "items": {"type": "object", "required": ["identifier", "name", "runtime_type", "verification_status"], "properties": {"identifier": {"type": "string"}, "name": {"type": "string"}, "runtime_type": {"type": "string"}, "owner": {"type": ["string", "null"]}, "qualifier": {"type": ["string", "null"]}, "columns": {"type": "array"}, "alias_base_table": {"type": ["string", "null"]}, "derived_sql": {"type": ["string", "null"]}, "verification_status": {"type": "string"}}, "additionalProperties": true}}}
+}

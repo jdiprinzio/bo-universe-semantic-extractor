@@ -1,0 +1,795 @@
+{
+  "$id": "https://bo-universe-semantic-extractor/config/catalog_schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Combined schema for all normalized entities produced by the NORMALIZE stage. Each entity schema is generated from the corresponding Pydantic model.",
+  "properties": {
+    "data_provider": {
+      "description": "A single query/data-provider within a Web Intelligence document.",
+      "properties": {
+        "data_provider_id": {
+          "title": "Data Provider Id",
+          "type": "string"
+        },
+        "data_provider_name": {
+          "title": "Data Provider Name",
+          "type": "string"
+        },
+        "document_cuid": {
+          "title": "Document Cuid",
+          "type": "string"
+        },
+        "prompts": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Prompts",
+          "type": "array"
+        },
+        "query_filters": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Query Filters",
+          "type": "array"
+        },
+        "query_properties": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Query Properties",
+          "type": "object"
+        },
+        "result_object_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Result Object Ids",
+          "type": "array"
+        },
+        "universe_cuid": {
+          "title": "Universe Cuid",
+          "type": "string"
+        }
+      },
+      "required": [
+        "document_cuid",
+        "data_provider_id",
+        "data_provider_name",
+        "universe_cuid"
+      ],
+      "title": "DataProvider",
+      "type": "object"
+    },
+    "physical_source": {
+      "description": "A physical table/column referenced by a universe object, prior to lineage verification.",
+      "properties": {
+        "column_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Column Name"
+        },
+        "database_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Database Name"
+        },
+        "evidence": {
+          "title": "Evidence",
+          "type": "string"
+        },
+        "object_name": {
+          "title": "Object Name",
+          "type": "string"
+        },
+        "object_type": {
+          "title": "Object Type",
+          "type": "string"
+        },
+        "schema_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Schema Name"
+        },
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_platform": {
+          "title": "Source Platform",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "source_platform",
+        "object_name",
+        "object_type",
+        "evidence"
+      ],
+      "title": "PhysicalSource",
+      "type": "object"
+    },
+    "raw_artifact": {
+      "description": "An unmodified API/SDK response plus its required evidence metadata.",
+      "properties": {
+        "content_hash_sha256": {
+          "title": "Content Hash Sha256",
+          "type": "string"
+        },
+        "http_status": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Http Status"
+        },
+        "payload": {
+          "additionalProperties": true,
+          "description": "Raw response payload, unmodified except for redactions.",
+          "title": "Payload",
+          "type": "object"
+        },
+        "redactions_applied": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Redactions Applied",
+          "type": "array"
+        },
+        "retrieved_at_utc": {
+          "format": "date-time",
+          "title": "Retrieved At Utc",
+          "type": "string"
+        },
+        "run_id": {
+          "title": "Run Id",
+          "type": "string"
+        },
+        "source_identifier": {
+          "title": "Source Identifier",
+          "type": "string"
+        },
+        "source_operation": {
+          "title": "Source Operation",
+          "type": "string"
+        },
+        "source_system": {
+          "title": "Source System",
+          "type": "string"
+        }
+      },
+      "required": [
+        "run_id",
+        "source_system",
+        "source_operation",
+        "source_identifier",
+        "retrieved_at_utc",
+        "content_hash_sha256"
+      ],
+      "title": "RawArtifact",
+      "type": "object"
+    },
+    "relationship": {
+      "description": "A join or context relationship between two physical sources.",
+      "properties": {
+        "cardinality": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cardinality"
+        },
+        "context_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Context Name"
+        },
+        "evidence": {
+          "title": "Evidence",
+          "type": "string"
+        },
+        "extraction_source": {
+          "title": "Extraction Source",
+          "type": "string"
+        },
+        "is_shortcut": {
+          "default": false,
+          "title": "Is Shortcut",
+          "type": "boolean"
+        },
+        "join_expression": {
+          "title": "Join Expression",
+          "type": "string"
+        },
+        "join_type": {
+          "title": "Join Type",
+          "type": "string"
+        },
+        "left_source_id": {
+          "title": "Left Source Id",
+          "type": "string"
+        },
+        "relationship_id": {
+          "title": "Relationship Id",
+          "type": "string"
+        },
+        "right_source_id": {
+          "title": "Right Source Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "relationship_id",
+        "left_source_id",
+        "right_source_id",
+        "join_expression",
+        "join_type",
+        "extraction_source",
+        "evidence"
+      ],
+      "title": "Relationship",
+      "type": "object"
+    },
+    "report_variable": {
+      "description": "A report-local variable, including formula and dependency references.",
+      "properties": {
+        "dependencies": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Dependencies",
+          "type": "array"
+        },
+        "document_cuid": {
+          "title": "Document Cuid",
+          "type": "string"
+        },
+        "extraction_source": {
+          "title": "Extraction Source",
+          "type": "string"
+        },
+        "formula": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Formula"
+        },
+        "qualification": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Qualification"
+        },
+        "variable_id": {
+          "title": "Variable Id",
+          "type": "string"
+        },
+        "variable_name": {
+          "title": "Variable Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "document_cuid",
+        "variable_id",
+        "variable_name",
+        "extraction_source"
+      ],
+      "title": "ReportVariable",
+      "type": "object"
+    },
+    "security_rule": {
+      "$defs": {
+        "SecurityValidationStatus": {
+          "description": "Whether an extracted security rule could be validated against a target mapping.",
+          "enum": [
+            "VALIDATED",
+            "UNVALIDATED",
+            "NOT_FOUND"
+          ],
+          "title": "SecurityValidationStatus",
+          "type": "string"
+        }
+      },
+      "description": "A security restriction extracted from BusinessObjects, pending migration mapping.",
+      "properties": {
+        "restricted_resource": {
+          "title": "Restricted Resource",
+          "type": "string"
+        },
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "security_type": {
+          "title": "Security Type",
+          "type": "string"
+        },
+        "source_rule_reference": {
+          "title": "Source Rule Reference",
+          "type": "string"
+        },
+        "target_mapping": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Mapping"
+        },
+        "universe_cuid": {
+          "title": "Universe Cuid",
+          "type": "string"
+        },
+        "validation_status": {
+          "$ref": "#/$defs/SecurityValidationStatus",
+          "default": "UNVALIDATED"
+        }
+      },
+      "required": [
+        "rule_id",
+        "universe_cuid",
+        "security_type",
+        "restricted_resource",
+        "source_rule_reference"
+      ],
+      "title": "SecurityRule",
+      "type": "object"
+    },
+    "semantic_enrichment": {
+      "$defs": {
+        "ReviewStatus": {
+          "description": "Review lifecycle for AI-proposed semantic enrichment. Never auto-set to APPROVED.",
+          "enum": [
+            "AI_PROPOSED",
+            "APPROVED",
+            "REJECTED",
+            "NEEDS_CHANGES"
+          ],
+          "title": "ReviewStatus",
+          "type": "string"
+        }
+      },
+      "description": "A candidate business-friendly annotation for a `UniverseObject`.\n\nNever authoritative: `review_status` defaults to `AI_PROPOSED` and must only be\nchanged by an explicit human review action, never by automated code.",
+      "properties": {
+        "canonical_term": {
+          "title": "Canonical Term",
+          "type": "string"
+        },
+        "generated_at_utc": {
+          "format": "date-time",
+          "title": "Generated At Utc",
+          "type": "string"
+        },
+        "generated_by_model": {
+          "title": "Generated By Model",
+          "type": "string"
+        },
+        "proposed_compatible_dimensions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Proposed Compatible Dimensions",
+          "type": "array"
+        },
+        "proposed_plain_language_definition": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Proposed Plain Language Definition"
+        },
+        "proposed_question_examples": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Proposed Question Examples",
+          "type": "array"
+        },
+        "proposed_required_filters": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Proposed Required Filters",
+          "type": "array"
+        },
+        "review_status": {
+          "$ref": "#/$defs/ReviewStatus",
+          "default": "AI_PROPOSED"
+        },
+        "reviewed_at_utc": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewed At Utc"
+        },
+        "reviewed_by": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewed By"
+        },
+        "synonyms": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Synonyms",
+          "type": "array"
+        }
+      },
+      "required": [
+        "canonical_term",
+        "generated_by_model",
+        "generated_at_utc"
+      ],
+      "title": "SemanticEnrichment",
+      "type": "object"
+    },
+    "universe": {
+      "description": "A published SAP BusinessObjects universe (UNX or UNV).",
+      "properties": {
+        "connection_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Connection Ids",
+          "type": "array"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "extracted_at_utc": {
+          "format": "date-time",
+          "title": "Extracted At Utc",
+          "type": "string"
+        },
+        "repository_path": {
+          "title": "Repository Path",
+          "type": "string"
+        },
+        "source_system": {
+          "title": "Source System",
+          "type": "string"
+        },
+        "universe_cuid": {
+          "title": "Universe Cuid",
+          "type": "string"
+        },
+        "universe_name": {
+          "title": "Universe Name",
+          "type": "string"
+        },
+        "universe_type": {
+          "description": "'UNX' or 'UNV'.",
+          "title": "Universe Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "universe_cuid",
+        "universe_name",
+        "universe_type",
+        "repository_path",
+        "source_system",
+        "extracted_at_utc"
+      ],
+      "title": "Universe",
+      "type": "object"
+    },
+    "universe_object": {
+      "$defs": {
+        "ObjectType": {
+          "description": "Allowed universe object types. Unknown types must stay UNKNOWN, never be coerced.",
+          "enum": [
+            "dimension",
+            "attribute",
+            "measure",
+            "filter",
+            "hierarchy",
+            "level",
+            "parameter",
+            "unknown"
+          ],
+          "title": "ObjectType",
+          "type": "string"
+        }
+      },
+      "description": "A single semantic-layer object (dimension, measure, filter, etc.) within a universe.",
+      "properties": {
+        "access_level": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Access Level"
+        },
+        "aggregation_function": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Aggregation Function"
+        },
+        "associated_dimension_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Associated Dimension Id"
+        },
+        "data_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Data Type"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "extraction_source": {
+          "title": "Extraction Source",
+          "type": "string"
+        },
+        "folder_path": {
+          "title": "Folder Path",
+          "type": "string"
+        },
+        "is_deprecated": {
+          "default": false,
+          "title": "Is Deprecated",
+          "type": "boolean"
+        },
+        "is_hidden": {
+          "default": false,
+          "title": "Is Hidden",
+          "type": "boolean"
+        },
+        "list_of_values_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "List Of Values Id"
+        },
+        "object_id": {
+          "title": "Object Id",
+          "type": "string"
+        },
+        "object_name": {
+          "title": "Object Name",
+          "type": "string"
+        },
+        "object_type": {
+          "$ref": "#/$defs/ObjectType"
+        },
+        "projection_function": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Projection Function"
+        },
+        "select_expression": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Select Expression"
+        },
+        "source_evidence_path": {
+          "title": "Source Evidence Path",
+          "type": "string"
+        },
+        "technical_name": {
+          "title": "Technical Name",
+          "type": "string"
+        },
+        "universe_cuid": {
+          "title": "Universe Cuid",
+          "type": "string"
+        },
+        "where_expression": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Where Expression"
+        }
+      },
+      "required": [
+        "universe_cuid",
+        "object_id",
+        "technical_name",
+        "object_name",
+        "folder_path",
+        "object_type",
+        "extraction_source",
+        "source_evidence_path"
+      ],
+      "title": "UniverseObject",
+      "type": "object"
+    },
+    "webi_document": {
+      "description": "A Web Intelligence document that depends on the extracted universe(s).",
+      "properties": {
+        "document_cuid": {
+          "title": "Document Cuid",
+          "type": "string"
+        },
+        "document_name": {
+          "title": "Document Name",
+          "type": "string"
+        },
+        "extraction_source": {
+          "title": "Extraction Source",
+          "type": "string"
+        },
+        "last_modified_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Last Modified At"
+        },
+        "repository_path": {
+          "title": "Repository Path",
+          "type": "string"
+        },
+        "universe_cuids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Universe Cuids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "document_cuid",
+        "document_name",
+        "repository_path",
+        "extraction_source"
+      ],
+      "title": "WebIDocument",
+      "type": "object"
+    }
+  },
+  "title": "BO Universe Semantic Extractor Normalized Catalog",
+  "type": "object"
+}

@@ -1,0 +1,62 @@
+{
+  "$defs": {
+    "SecurityValidationStatus": {
+      "description": "Whether an extracted security rule could be validated against a target mapping.",
+      "enum": [
+        "VALIDATED",
+        "UNVALIDATED",
+        "NOT_FOUND"
+      ],
+      "title": "SecurityValidationStatus",
+      "type": "string"
+    }
+  },
+  "description": "A security restriction extracted from BusinessObjects, pending migration mapping.",
+  "properties": {
+    "restricted_resource": {
+      "title": "Restricted Resource",
+      "type": "string"
+    },
+    "rule_id": {
+      "title": "Rule Id",
+      "type": "string"
+    },
+    "security_type": {
+      "title": "Security Type",
+      "type": "string"
+    },
+    "source_rule_reference": {
+      "title": "Source Rule Reference",
+      "type": "string"
+    },
+    "target_mapping": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Target Mapping"
+    },
+    "universe_cuid": {
+      "title": "Universe Cuid",
+      "type": "string"
+    },
+    "validation_status": {
+      "$ref": "#/$defs/SecurityValidationStatus",
+      "default": "UNVALIDATED"
+    }
+  },
+  "required": [
+    "rule_id",
+    "universe_cuid",
+    "security_type",
+    "restricted_resource",
+    "source_rule_reference"
+  ],
+  "title": "SecurityRule",
+  "type": "object"
+}

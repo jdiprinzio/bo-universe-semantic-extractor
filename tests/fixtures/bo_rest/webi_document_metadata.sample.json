@@ -1,0 +1,31 @@
+{
+  "run_id": "run-sample-0001",
+  "source_system": "BO_WEBI_REST",
+  "source_operation": "getDocumentMetadata",
+  "source_identifier": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+  "retrieved_at_utc": "2026-01-15T09:33:00Z",
+  "http_status": 200,
+  "content_hash_sha256": "0000000000000000000000000000000000000000000000000000000000dd",
+  "redactions_applied": [],
+  "payload": {
+    "data_providers": [
+      {
+        "id": "DP_0001",
+        "name": "Query 1",
+        "universe_cuid": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "result_objects": ["OBJ_0001", "OBJ_0002"],
+        "filters": ["Sales Amount > 0"],
+        "prompts": []
+      }
+    ],
+    "variables": [
+      {
+        "id": "VAR_0001",
+        "name": "Sales Amount (Rounded)",
+        "qualification": "measure",
+        "formula": "=Round([Sales Amount];0)",
+        "dependencies": ["OBJ_0002"]
+      }
+    ]
+  }
+}

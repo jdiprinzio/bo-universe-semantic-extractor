@@ -1,0 +1,21 @@
+{
+  "run_id": "run-sample-0001",
+  "source_system": "BO_WEBI_REST",
+  "source_operation": "listDependentDocuments",
+  "source_identifier": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "retrieved_at_utc": "2026-01-15T09:32:00Z",
+  "http_status": 200,
+  "content_hash_sha256": "0000000000000000000000000000000000000000000000000000000000cc",
+  "redactions_applied": [],
+  "payload": {
+    "documents": [
+      {
+        "cuid": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+        "name": "Sample Sales Report",
+        "path": "/Sample/Reports/Sample Sales Report",
+        "universes": ["AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"],
+        "last_modified": "2026-01-10T12:00:00Z"
+      }
+    ]
+  }
+}

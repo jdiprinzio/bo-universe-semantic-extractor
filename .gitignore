@@ -1,0 +1,46 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# Output / generated artifacts
+output/
+raw/
+normalized/
+route_b_export/
+remote-sdk-extractor/target/
+remote-sdk-extractor/*.jar
+remote-sdk-extractor/sdk-classpath.txt
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/settings.json
+
+# Route B exports
+route_b_export/
+
+# Semantic outputs
+normalized/
+generated-hana/
+
+# Remote Java build artifacts
+remote-sdk-extractor/lib/
+remote-sdk-extractor/target/
+remote-sdk-extractor/build/
+remote-sdk-extractor/output/

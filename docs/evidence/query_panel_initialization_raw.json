@@ -1,0 +1,31 @@
+{
+  "name": "DM_Invoice_Data_Mart",
+  "id": "PER_SAMPLE_100",
+  "canCreateAndEditDP": true,
+  "refreshable": true,
+  "qpDataPreviewHide": false,
+  "qpFilterHide": false,
+  "qpIsMaximized": false,
+  "qpOutlineHide": false,
+  "qpScopeAnalysisHide": false,
+  "unvParameterArr": [
+    {
+      "question": "Enter End Date (MM/DD/YYYY):",
+      "name": "Enter End Date (MM/DD/YYYY):",
+      "dataType": 3,
+      "id": "PMT_1"
+    },
+    {
+      "question": "Run For Yesterday",
+      "name": "Run For Yesterday",
+      "dataType": 2,
+      "id": "PMT_2"
+    },
+    {
+      "question": "Enter Begin Date (MM/DD/YYYY):",
+      "name": "Enter Begin Date (MM/DD/YYYY):",
+      "dataType": 3,
+      "id": "PMT_3"
+    }
+  ]
+}

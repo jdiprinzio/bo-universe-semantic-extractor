@@ -1,0 +1,84 @@
+{
+  "run_id": "run-evidence-0001",
+  "source_system": "BO_QUERY_PANEL_INTERNAL",
+  "source_operation": "queryPanelOutline",
+  "source_identifier": "PER_SAMPLE_100",
+  "retrieved_at_utc": "2026-02-01T09:00:00Z",
+  "http_status": 200,
+  "content_hash_sha256": "8783efff3b6178e1c56a095b8ccb76a7e2b7cc7c01143063c2ba7f998837a15c",
+  "redactions_applied": [],
+  "payload": {
+    "name": "Profit Center Dimension",
+    "child": true,
+    "objType": 0,
+    "userData": {
+      "b": "CLS_100",
+      "c": 20,
+      "h": "",
+      "j": 0
+    },
+    "nodes": [
+      {
+        "name": "Above Profit Center Hierarchy",
+        "child": true,
+        "objType": 0,
+        "userData": {
+          "b": "CLS_101",
+          "c": 20,
+          "h": "Profit Center Dimension"
+        },
+        "nodes": [
+          {
+            "name": "Organization",
+            "child": false,
+            "help": "SAMPLE_DIMENSION.ORG_NAME",
+            "objType": 0,
+            "userData": {
+              "b": "OBJ_1001",
+              "g": "BJ_1001",
+              "c": 2,
+              "h": "Profit Center Dimension/Above Profit Center Hierarchy",
+              "i": "Organization : SAMPLE_DIMENSION.ORG_NAME",
+              "j": 0,
+              "s": 2
+            },
+            "nodes": []
+          },
+          {
+            "name": "Division",
+            "child": true,
+            "help": "Sample division object",
+            "objType": 0,
+            "userData": {
+              "b": "OBJ_1002",
+              "g": "BJ_1002",
+              "c": 2,
+              "h": "Profit Center Dimension/Above Profit Center Hierarchy",
+              "i": "Sample division object",
+              "j": 0,
+              "s": 2
+            },
+            "nodes": [
+              {
+                "name": "Division Desc",
+                "child": false,
+                "help": "Sample division description",
+                "objType": 0,
+                "userData": {
+                  "b": "OBJ_1003",
+                  "g": "BJ_1003",
+                  "c": 4,
+                  "h": "Profit Center Dimension/Above Profit Center Hierarchy/Division",
+                  "i": "Sample division description",
+                  "j": 2,
+                  "s": 2
+                },
+                "nodes": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

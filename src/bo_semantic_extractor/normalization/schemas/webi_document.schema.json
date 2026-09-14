@@ -1,0 +1,49 @@
+{
+  "description": "A Web Intelligence document that depends on the extracted universe(s).",
+  "properties": {
+    "document_cuid": {
+      "title": "Document Cuid",
+      "type": "string"
+    },
+    "document_name": {
+      "title": "Document Name",
+      "type": "string"
+    },
+    "extraction_source": {
+      "title": "Extraction Source",
+      "type": "string"
+    },
+    "last_modified_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Last Modified At"
+    },
+    "repository_path": {
+      "title": "Repository Path",
+      "type": "string"
+    },
+    "universe_cuids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Universe Cuids",
+      "type": "array"
+    }
+  },
+  "required": [
+    "document_cuid",
+    "document_name",
+    "repository_path",
+    "extraction_source"
+  ],
+  "title": "WebIDocument",
+  "type": "object"
+}
