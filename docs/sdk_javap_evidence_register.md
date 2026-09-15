@@ -1,5 +1,19 @@
 # ROUTE_B_SDK — javap Evidence Register
 
+## Runtime Namespace Reconciliation — Patch Release 11
+
+The installed BusinessObjects 4.3 runtime does not expose the documented
+`com.sap.sl.sdk.authoring.*` namespaces used by earlier evidence documents. Runtime javap
+evidence is authoritative for this machine and uses:
+
+- `com.sap.sl.datasource.*` from `com.sap.sl.sdk.jar` for the Business Layer model.
+- `com.businessobjects.mds.datafoundation.*` from `com.businessobjects.mds.datafoundation.jar`
+	for the Data Foundation model.
+
+This is a namespace correction only, not a deprecation or invalidation of the previously
+confirmed method evidence. The machine-readable source of truth is
+`config/route_b/confirmed_sdk_capabilities.json`; its status remains `CONFIRMED_BY_JAVAP`.
+
 **Evidence status:** `CONFIRMED_BY_JAVAP`
 
 **Evidence source:** Post-Milestone-1 javap output supplied for the SDK prerequisite

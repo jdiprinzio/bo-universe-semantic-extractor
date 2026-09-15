@@ -1,0 +1,13 @@
+{
+  "package_name": "route-b-sdk-milestone-2a",
+  "schema_version": "route_b.sdk.v1",
+  "track": "ROUTE_B_SDK",
+  "purpose": "Runtime discovery and loading bridge discovery only",
+  "cms_connection_attempted": false,
+  "sap_sdk_jars_included": false,
+  "universe_files_included": false,
+  "hana_artifacts_included": false,
+  "source_of_truth": "config/route_b/confirmed_sdk_capabilities.json",
+  "entrypoint": "remote-sdk-extractor/scripts/run-milestone-2a.ps1",
+  "remaining_bridge_status": "REQUIRED_INPUT"
+}

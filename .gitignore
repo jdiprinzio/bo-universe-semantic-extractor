@@ -44,3 +44,8 @@ remote-sdk-extractor/lib/
 remote-sdk-extractor/target/
 remote-sdk-extractor/build/
 remote-sdk-extractor/output/
+
+# Milestone 2A source-only transfer package (no SAP binaries or runtime artifacts)
+!remote-sdk-extractor/dist/
+!remote-sdk-extractor/dist/milestone-2a/
+!remote-sdk-extractor/dist/milestone-2a/**

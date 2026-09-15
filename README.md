@@ -275,3 +275,17 @@ python -m mypy src
 - Confirmed local `.blx`/`.dfx` loading API from installed Javadocs or `javap` output.
 - Read-only CMC View permissions for the universe and attached connections.
 - A sanctioned non-production read-only test window.
+
+## Milestone 2A: Runtime Discovery and Loading Bridge Discovery
+
+Milestone 2A is implemented as a remote-only discovery bridge. It does not connect to CMS,
+retrieve or load a universe, or generate HANA artifacts. The package is
+`remote-sdk-extractor/dist/milestone-2a/`; the repository entrypoint is
+`remote-sdk-extractor/scripts/run-milestone-2a.ps1` and the runbook is
+[docs/milestone_2a_remote_runbook.md](docs/milestone_2a_remote_runbook.md).
+
+The runner accepts SAP install root, IDT plugin directory, SAP-supported JVM bin directory,
+local IDT project directory, working directory, and output directory. It inventories external
+JARs without copying them, validates `config/route_b/confirmed_sdk_capabilities.json`, runs
+`javap`, and executes only a reflection/class-loading probe. JVM version and architecture are
+detected at runtime; Java 11 is not required.

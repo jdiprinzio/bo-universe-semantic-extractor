@@ -1,0 +1,70 @@
+{
+  "schema_version": "route_b.sdk.v1",
+  "capability_status": "CONFIRMED_BY_JAVAP",
+  "evidence_source": "Post-Milestone-1 javap evidence supplied for SDK prerequisite reconciliation; raw output is remote-only and is not committed.",
+  "runtime_requirement": {
+    "jvm": "SAP-supported JVM matching the installed BusinessObjects 4.3 client runtime",
+    "version": "DETECT_AT_RUNTIME",
+    "architecture": "DETECT_AT_RUNTIME"
+  },
+  "core_jars": [
+    "com.sap.sl.sdk.jar",
+    "com.sap.sl.edp.relational.jar",
+    "com.sap.sl.edp.hana.jar",
+    "com.businessobjects.mds.datafoundation.jar"
+  ],
+  "capabilities": [
+    {"class": "com.sap.sl.sdk.authoring.businesslayer.DataSourceElement", "jar": "com.sap.sl.sdk.jar", "method": "getName()", "field": "name", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.businesslayer.DataSourceElement", "jar": "com.sap.sl.sdk.jar", "method": "getDescription()", "field": "description", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.businesslayer.DataSourceElement", "jar": "com.sap.sl.sdk.jar", "method": "getIdentifier()", "field": "identifier", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.businesslayer.BusinessLayerItem", "jar": "com.sap.sl.sdk.jar", "method": "getPath()", "field": "path", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.businesslayer.BusinessLayerItem", "jar": "com.sap.sl.sdk.jar", "method": "getFullPath()", "field": "full_path", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.businesslayer.DataSource", "jar": "com.sap.sl.sdk.jar", "method": "getBusinessLayer()", "field": "business_layer", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.businesslayer.DataSource", "jar": "com.sap.sl.sdk.jar", "method": "getPrompts()", "field": "prompts", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.businesslayer.DataSource", "jar": "com.sap.sl.sdk.jar", "method": "getListsOfValues()", "field": "lists_of_values", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.businesslayer.DataSource", "jar": "com.sap.sl.sdk.jar", "method": "getContexts()", "field": "contexts", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.businesslayer.DataSource", "jar": "com.sap.sl.sdk.jar", "method": "getBusinessLayerItemFlatList()", "field": "business_layer_item_flat_list", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.businesslayer.BusinessLayer", "jar": "com.sap.sl.sdk.jar", "method": "getDimensions()", "field": "dimensions", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.businesslayer.BusinessLayer", "jar": "com.sap.sl.sdk.jar", "method": "getMeasures()", "field": "measures", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.businesslayer.BusinessLayer", "jar": "com.sap.sl.sdk.jar", "method": "getFilters()", "field": "filters", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.businesslayer.BusinessLayer", "jar": "com.sap.sl.sdk.jar", "method": "getHierarchies()", "field": "hierarchies", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.businesslayer.BusinessLayer", "jar": "com.sap.sl.sdk.jar", "method": "getAnalysisDimensions()", "field": "analysis_dimensions", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.businesslayer.Dimension", "jar": "com.sap.sl.sdk.jar", "method": "getAttributes()", "field": "attributes", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.businesslayer.Measure", "jar": "com.sap.sl.sdk.jar", "method": "getDefaultAggregation()", "field": "default_aggregation", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.DataFoundation", "jar": "com.sap.sl.sdk.jar", "method": "getTables()", "field": "tables", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.DataFoundation", "jar": "com.sap.sl.sdk.jar", "method": "getJoins()", "field": "joins", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.DataFoundation", "jar": "com.sap.sl.sdk.jar", "method": "getContexts()", "field": "contexts", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.Table", "jar": "com.sap.sl.sdk.jar", "method": "getColumns()", "field": "columns", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.SQLTable", "jar": "com.sap.sl.sdk.jar", "method": "getOwner()", "field": "owner", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.SQLTable", "jar": "com.sap.sl.sdk.jar", "method": "getQualifier()", "field": "qualifier", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.SQLTable", "jar": "com.sap.sl.sdk.jar", "method": "getType()", "field": "table_type", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.AliasTable", "jar": "com.sap.sl.sdk.jar", "method": "getAliasedTable()", "field": "aliased_table", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.DerivedTable", "jar": "com.sap.sl.sdk.jar", "method": "getExpression()", "field": "derived_expression", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.DerivedTable", "jar": "com.sap.sl.sdk.jar", "method": "getEncodedExpression()", "field": "encoded_derived_expression", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.Join", "jar": "com.sap.sl.sdk.jar", "method": "getLeftColumns()", "field": "left_columns", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.Join", "jar": "com.sap.sl.sdk.jar", "method": "getRightColumns()", "field": "right_columns", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.Join", "jar": "com.sap.sl.sdk.jar", "method": "getExpression()", "field": "join_expression", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.Join", "jar": "com.sap.sl.sdk.jar", "method": "getCardinality()", "field": "cardinality", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.Join", "jar": "com.sap.sl.sdk.jar", "method": "getLeftTable()", "field": "left_table", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.Join", "jar": "com.sap.sl.sdk.jar", "method": "getRightTable()", "field": "right_table", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.SQLJoin", "jar": "com.sap.sl.sdk.jar", "method": "getOuterType()", "field": "outer_type", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.SQLJoin", "jar": "com.sap.sl.sdk.jar", "method": "getOperator()", "field": "operator", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.SQLJoin", "jar": "com.sap.sl.sdk.jar", "method": "isAutoJoin()", "field": "auto_join", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.SQLJoin", "jar": "com.sap.sl.sdk.jar", "method": "isCustom()", "field": "custom", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.Context", "jar": "com.sap.sl.sdk.jar", "method": "getJoins()", "field": "joins", "status": "CONFIRMED_BY_JAVAP"},
+    {"class": "com.sap.sl.sdk.authoring.datafoundation.Context", "jar": "com.sap.sl.sdk.jar", "method": "getExcludedJoins()", "field": "excluded_joins", "status": "CONFIRMED_BY_JAVAP"}
+  ],
+  "enum_values": {
+    "com.sap.sl.sdk.authoring.datafoundation.Cardinality": ["CUNKNOWN", "C1_1", "C1_N", "CN_1", "CN_N"],
+    "com.sap.sl.sdk.authoring.datafoundation.OuterType": ["OUTER_NONE", "OUTER_LEFT", "OUTER_RIGHT", "OUTER_FULL", "OUTER_UNKNOWN"],
+    "com.sap.sl.sdk.authoring.datafoundation.JoinOperator": ["EQUAL", "NOT_EQUAL", "GREATER", "GREATER_OR_EQUAL", "LESS", "LESS_OR_EQUAL", "COMPLEX", "UNKNOWN"]
+  },
+  "remaining_required_inputs": [
+    "Complete transitive SDK classpath",
+    "Confirmed read-only loading path from local BLX/DFX or CMS retrieval",
+    "Confirmed method or service returning DataSource",
+    "Confirmed method or service returning DataFoundation",
+    "CMS details and permissions only if CMS retrieval is selected",
+    "Remote working and export directories"
+  ]
+}
