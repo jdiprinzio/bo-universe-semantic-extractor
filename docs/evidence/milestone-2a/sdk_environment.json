@@ -1,0 +1,13 @@
+﻿{
+    "schema_version":  "route_b.sdk.v1",
+    "sap_install_root":  "E:\\Program Files (x86)\\SAP BusinessObjects\\SAP BusinessObjects Enterprise XI 4.0",
+    "idt_plugin_directory":  "E:\\Program Files (x86)\\SAP BusinessObjects\\SAP BusinessObjects Enterprise XI 4.0\\Information Design Tool\\plugins",
+    "sap_jvm_bin_directory":  "E:\\Program Files (x86)\\SAP BusinessObjects\\SAP BusinessObjects Enterprise XI 4.0\\win64_x64\\sapjvm\\bin",
+    "local_idt_project_directory":  "C:\\Users\\jdiprinzio.VISTANCE\\.businessobjects\\bimodeler_14\\workspace\\DM_Invoice_Data_Mart",
+    "working_directory":  "E:\\bo-universe-semantic-extractor\\work",
+    "output_directory":  "E:\\bo-universe-semantic-extractor\\output",
+    "java_version":  "java version \"1.8.0_421\"",
+    "jvm_architecture":  "64-bit",
+    "os_architecture":  "x64",
+    "cms_connection_attempted":  false
+}

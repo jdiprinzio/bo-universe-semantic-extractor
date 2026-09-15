@@ -1,0 +1,22 @@
+﻿{
+    "capability_status":  "CONFIRMED_BY_JAVAP",
+    "validated_class_count":  39,
+    "validated_classes":  [
+                              "com.businessobjects.mds.datafoundation.AliasTable",
+                              "com.businessobjects.mds.datafoundation.Context",
+                              "com.businessobjects.mds.datafoundation.DataFoundation",
+                              "com.businessobjects.mds.datafoundation.DerivedTable",
+                              "com.businessobjects.mds.datafoundation.Join",
+                              "com.businessobjects.mds.datafoundation.SQLJoin",
+                              "com.businessobjects.mds.datafoundation.SQLTable",
+                              "com.businessobjects.mds.datafoundation.Table",
+                              "com.sap.sl.datasource.BusinessLayer",
+                              "com.sap.sl.datasource.BusinessLayerItem",
+                              "com.sap.sl.datasource.DataSource",
+                              "com.sap.sl.datasource.DataSourceElement",
+                              "com.sap.sl.datasource.Dimension",
+                              "com.sap.sl.datasource.Measure"
+                          ],
+    "runtime_probe":  "reflection_only",
+    "cms_connection_attempted":  false
+}

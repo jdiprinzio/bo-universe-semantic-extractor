@@ -1,0 +1,4 @@
+﻿{
+    "jar":  "E:\\Program Files (x86)\\SAP BusinessObjects\\SAP BusinessObjects Enterprise XI 4.0\\Information Design Tool\\plugins\\com.businessobjects.mds.datafoundation.jar",
+    "class":  "com.businessobjects.mds.datafoundation.DataFoundation"
+}

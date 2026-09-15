@@ -1,0 +1,8 @@
+﻿{
+    "status":  "DISCOVERY_COMPLETE",
+    "cms_connection_attempted":  false,
+    "candidate_class_count":  0,
+    "javap_strategy":  "ONE_JAR_PER_INVOCATION",
+    "javap_output":  "javap_method_inventory.txt",
+    "loading_bridge":  "REQUIRED_INPUT until DataSource/DataFoundation provider/loading services are confirmed"
+}
