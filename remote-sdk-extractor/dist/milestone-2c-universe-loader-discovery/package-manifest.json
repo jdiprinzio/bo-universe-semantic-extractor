@@ -1,0 +1,11 @@
+{
+  "package_name": "route_b_sdk_milestone_2c_universe_loader_discovery",
+  "schema_version": "route_b.sdk.v1",
+  "purpose": "Reflection-only discovery of Universe loader methods and DataFoundationFile usage",
+  "cms_connection_attempted": false,
+  "sdk_jars_included": false,
+  "universe_artifacts_included": false,
+  "hana_artifacts_included": false,
+  "read_only": true,
+  "entrypoint": "run-universe-loader-discovery.ps1"
+}
