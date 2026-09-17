@@ -55,11 +55,8 @@ foreach ($marker in @(
     "isAssignableFrom",
     "related_return_type_inventory",
     "URLClassLoader",
-    "PROBE_SCOPE_MISMATCH",
-    "included_jars.txt",
-    "confirmed_classes.txt",
-    "HANDOFF_PREFLIGHT",
-    "failure_diagnostics"
+    "walkFileTree",
+    "Xmx4g"
 )) {
     $found = Select-String -Path "$pkg\*","$pkg\src\main\java\com\vistance\bo\routeb\*" -Pattern $marker -ErrorAction SilentlyContinue
     if ($found) { Write-Host "OK: $marker present" }
