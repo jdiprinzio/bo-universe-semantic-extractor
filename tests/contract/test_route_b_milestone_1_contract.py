@@ -213,10 +213,10 @@ def test_milestone_2a_discovery_prioritizes_exact_loading_classes() -> None:
 
 def test_milestone_2a_probe_matches_capabilities_class_schema() -> None:
     probe = (JAVA_DIR / "Milestone2aProbe.java").read_text(encoding="utf-8")
-    assert "CAPABILITIES_ARRAY" in probe
-    assert "CLASS_VALUE" in probe
+    assert "Files.readAllLines" in probe
+    assert "confirmed_classes.txt" in probe
     assert 'marker = "\\\"class\\\":\\\""' not in probe
-    assert "no confirmed classes" in probe
+    assert "CAPABILITY_HANDOFF_FAILURE" in probe
 
 
 def test_runtime_capability_registry_uses_installed_namespaces_and_jars() -> None:

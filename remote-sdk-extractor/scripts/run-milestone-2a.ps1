@@ -84,6 +84,7 @@ function Require-Path {
         throw "$Code`: $Label does not exist: $PathValue"
     }
 }
+function Write-Utf8NoBomLines([string]$Path,[string[]]$Lines){[IO.File]::WriteAllLines($Path,$Lines,(New-Object Text.UTF8Encoding($false)))}
 
 function Invoke-SelfTest {
     $required = @(
@@ -136,6 +137,8 @@ try {
     if (-not $capabilities.capabilities) {
         throw 'MALFORMED_CAPABILITY_REGISTRY: capabilities array is empty'
     }
+    $confirmedClassesPath=Join-Path $script:OutputRoot 'confirmed_classes.txt'
+    Write-Utf8NoBomLines $confirmedClassesPath @($capabilities.capabilities|ForEach-Object{$_.class}|Where-Object{$_})
 
     $sdkJars = @(Invoke-Phase -Name 'JAR_INVENTORY' -Action {
         @(Get-ChildItem -LiteralPath $using:SapInstallRoot -Filter '*.jar' -File -Recurse; Get-ChildItem -LiteralPath $using:IdtPluginDirectory -Filter '*.jar' -File -Recurse) | Sort-Object FullName -Unique
@@ -237,7 +240,7 @@ try {
     $probeOutput = Join-Path $script:OutputRoot 'loading_bridge_probe.json'
     $probeClasspath = @($compileDir) + @($sdkJars | ForEach-Object { $_.DirectoryName } | Sort-Object -Unique | ForEach-Object { Join-Path $_ '*' })
     $probeClasspathArgument = $probeClasspath -join [IO.Path]::PathSeparator
-    & $tools['java.exe'] -cp $probeClasspathArgument com.vistance.bo.routeb.Milestone2aProbe $script:CapabilityRegistry $probeOutput
+    & $tools['java.exe'] -cp $probeClasspathArgument com.vistance.bo.routeb.Milestone2aProbe $confirmedClassesPath $probeOutput
     if ($LASTEXITCODE -ne 0) { throw 'MISSING_CONFIRMED_CLASSES: reflection probe could not load all confirmed classes' }
     $probe = Get-Content -LiteralPath $probeOutput -Raw | ConvertFrom-Json
     if ($probe.status -ne 'CONFIRMED' -or $probe.cms_connection_attempted -ne $false -or $probe.reflection_only -ne $true) {

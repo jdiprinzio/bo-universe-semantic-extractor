@@ -1,0 +1,11 @@
+{
+  "package_name": "route_b_sdk_milestone_2b_provider_discovery",
+  "schema_version": "route_b.sdk.v1",
+  "purpose": "Reflection and javap provider discovery only",
+  "cms_connection_attempted": false,
+  "sdk_jars_included": false,
+  "universe_artifacts_included": false,
+  "hana_artifacts_included": false,
+  "read_only": true,
+  "entrypoint": "run-provider-discovery.ps1"
+}

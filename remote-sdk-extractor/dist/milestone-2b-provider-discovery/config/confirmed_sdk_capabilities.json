@@ -1,0 +1,325 @@
+{
+    "schema_version":  "route_b.sdk.v1",
+    "capability_status":  "CONFIRMED_BY_JAVAP",
+    "evidence_source":  "Post-Milestone-1 javap evidence supplied for SDK prerequisite reconciliation; raw output is remote-only and is not committed.",
+    "runtime_requirement":  {
+                                "jvm":  "SAP-supported JVM matching the installed BusinessObjects 4.3 client runtime",
+                                "version":  "DETECT_AT_RUNTIME",
+                                "architecture":  "DETECT_AT_RUNTIME"
+                            },
+    "core_jars":  [
+                      "com.sap.sl.sdk.jar",
+                      "com.sap.sl.edp.relational.jar",
+                      "com.sap.sl.edp.hana.jar",
+                      "com.businessobjects.mds.datafoundation.jar"
+                  ],
+    "capabilities":  [
+                         {
+                             "class":  "com.sap.sl.datasource.DataSourceElement",
+                             "jar":  "com.sap.sl.sdk.jar",
+                             "method":  "getName()",
+                             "field":  "name",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.sap.sl.datasource.DataSourceElement",
+                             "jar":  "com.sap.sl.sdk.jar",
+                             "method":  "getDescription()",
+                             "field":  "description",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.sap.sl.datasource.DataSourceElement",
+                             "jar":  "com.sap.sl.sdk.jar",
+                             "method":  "getIdentifier()",
+                             "field":  "identifier",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.sap.sl.datasource.BusinessLayerItem",
+                             "jar":  "com.sap.sl.sdk.jar",
+                             "method":  "getPath()",
+                             "field":  "path",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.sap.sl.datasource.BusinessLayerItem",
+                             "jar":  "com.sap.sl.sdk.jar",
+                             "method":  "getFullPath()",
+                             "field":  "full_path",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.sap.sl.datasource.DataSource",
+                             "jar":  "com.sap.sl.sdk.jar",
+                             "method":  "getBusinessLayer()",
+                             "field":  "business_layer",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.sap.sl.datasource.DataSource",
+                             "jar":  "com.sap.sl.sdk.jar",
+                             "method":  "getPrompts()",
+                             "field":  "prompts",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.sap.sl.datasource.DataSource",
+                             "jar":  "com.sap.sl.sdk.jar",
+                             "method":  "getListsOfValues()",
+                             "field":  "lists_of_values",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.sap.sl.datasource.DataSource",
+                             "jar":  "com.sap.sl.sdk.jar",
+                             "method":  "getContexts()",
+                             "field":  "contexts",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.sap.sl.datasource.DataSource",
+                             "jar":  "com.sap.sl.sdk.jar",
+                             "method":  "getBusinessLayerItemFlatList()",
+                             "field":  "business_layer_item_flat_list",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.sap.sl.datasource.BusinessLayer",
+                             "jar":  "com.sap.sl.sdk.jar",
+                             "method":  "getDimensions()",
+                             "field":  "dimensions",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.sap.sl.datasource.BusinessLayer",
+                             "jar":  "com.sap.sl.sdk.jar",
+                             "method":  "getMeasures()",
+                             "field":  "measures",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.sap.sl.datasource.BusinessLayer",
+                             "jar":  "com.sap.sl.sdk.jar",
+                             "method":  "getFilters()",
+                             "field":  "filters",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.sap.sl.datasource.BusinessLayer",
+                             "jar":  "com.sap.sl.sdk.jar",
+                             "method":  "getHierarchies()",
+                             "field":  "hierarchies",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.sap.sl.datasource.BusinessLayer",
+                             "jar":  "com.sap.sl.sdk.jar",
+                             "method":  "getAnalysisDimensions()",
+                             "field":  "analysis_dimensions",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.sap.sl.datasource.Dimension",
+                             "jar":  "com.sap.sl.sdk.jar",
+                             "method":  "getAttributes()",
+                             "field":  "attributes",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.sap.sl.datasource.Measure",
+                             "jar":  "com.sap.sl.sdk.jar",
+                             "method":  "getDefaultAggregation()",
+                             "field":  "default_aggregation",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.DataFoundation",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getTables()",
+                             "field":  "tables",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.DataFoundation",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getJoins()",
+                             "field":  "joins",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.DataFoundation",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getContexts()",
+                             "field":  "contexts",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.Table",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getColumns()",
+                             "field":  "columns",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.SQLTable",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getOwner()",
+                             "field":  "owner",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.SQLTable",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getQualifier()",
+                             "field":  "qualifier",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.SQLTable",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getType()",
+                             "field":  "table_type",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.AliasTable",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getAliasedTable()",
+                             "field":  "aliased_table",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.DerivedTable",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getExpression()",
+                             "field":  "derived_expression",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.DerivedTable",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getEncodedExpression()",
+                             "field":  "encoded_derived_expression",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.Join",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getLeftColumns()",
+                             "field":  "left_columns",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.Join",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getRightColumns()",
+                             "field":  "right_columns",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.Join",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getExpression()",
+                             "field":  "join_expression",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.Join",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getCardinality()",
+                             "field":  "cardinality",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.Join",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getLeftTable()",
+                             "field":  "left_table",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.Join",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getRightTable()",
+                             "field":  "right_table",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.SQLJoin",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getOuterType()",
+                             "field":  "outer_type",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.SQLJoin",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getOperator()",
+                             "field":  "operator",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.SQLJoin",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "isAutoJoin()",
+                             "field":  "auto_join",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.SQLJoin",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "isCustom()",
+                             "field":  "custom",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.Context",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getJoins()",
+                             "field":  "joins",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         },
+                         {
+                             "class":  "com.businessobjects.mds.datafoundation.Context",
+                             "jar":  "com.businessobjects.mds.datafoundation.jar",
+                             "method":  "getExcludedJoins()",
+                             "field":  "excluded_joins",
+                             "status":  "CONFIRMED_BY_JAVAP"
+                         }
+                     ],
+    "enum_values":  {
+                        "com.businessobjects.mds.datafoundation.JoinOperator":  [
+                                                                                    "EQUAL",
+                                                                                    "NOT_EQUAL",
+                                                                                    "GREATER",
+                                                                                    "GREATER_OR_EQUAL",
+                                                                                    "LESS",
+                                                                                    "LESS_OR_EQUAL",
+                                                                                    "COMPLEX",
+                                                                                    "UNKNOWN"
+                                                                                ],
+                        "com.businessobjects.mds.datafoundation.Cardinality":  [
+                                                                                   "CUNKNOWN",
+                                                                                   "C1_1",
+                                                                                   "C1_N",
+                                                                                   "CN_1",
+                                                                                   "CN_N"
+                                                                               ],
+                        "com.businessobjects.mds.datafoundation.Outer":  [
+                                                                             "OUTER_NONE",
+                                                                             "OUTER_LEFT",
+                                                                             "OUTER_RIGHT",
+                                                                             "OUTER_FULL",
+                                                                             "OUTER_UNKNOWN"
+                                                                         ]
+                    },
+    "remaining_required_inputs":  [
+                                      "Complete transitive SDK classpath",
+                                      "Confirmed read-only loading path from local BLX/DFX or CMS retrieval",
+                                      "Confirmed method or service returning DataSource",
+                                      "Confirmed method or service returning DataFoundation",
+                                      "CMS details and permissions only if CMS retrieval is selected",
+                                      "Remote working and export directories"
+                                  ]
+}
